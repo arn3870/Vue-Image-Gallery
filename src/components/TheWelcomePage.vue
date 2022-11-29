@@ -1,34 +1,44 @@
 <template>
   <div class="mainDIv">
-    <section class="welcomeDiv">
-      <h1>Welcome to Cat Gallery</h1>
-      <br />
-    </section>
-    <loader v-if="loading" />
-
+    <loader v-if="loading">
+      <section class="welcomeDiv">
+        <h1>Welcome to Cat Gallery</h1>
+        <br />
+      </section>
+    </loader>
+    <div v-else><hello-world></hello-world></div>
   </div>
 </template>
 
 <script>
+import { computed, ref } from "vue";
 import TheWelcome from "./TheWelcome.vue";
+import HelloWorld from "./HelloWorld.vue";
 export default {
-  setup() {},
+  components: {
+    TheWelcome,
+    HelloWorld,
+  },
+  setup() {
+    let loading = ref(true);
+
+    return {
+      loading,
+    };
+  },
   mounted() {
     setTimeout(() => {
       this.loading = false;
     }, 3000);
   },
-  components: {
-    TheWelcome
-  },
 };
 </script>
 
 <style scoped>
-#app{
+#app {
   font-family: monospace;
 }
-h1{
+h1 {
   font-family: monospace;
 }
 .mainDiv {
