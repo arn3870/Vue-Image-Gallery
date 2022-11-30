@@ -1,12 +1,9 @@
 <template>
   <div class="mainDIv">
-    <loader v-if="loading">
-      <section class="welcomeDiv">
-        <h1>Welcome to Cat Gallery</h1>
-        <br />
-      </section>
-    </loader>
-    <div v-else><hello-world></hello-world></div>
+    <div v-if="loading" class="welcomeDiv">
+      <h1>The Cat Gallery</h1>
+    </div>
+    <hello-world v-if="!loading"></hello-world>
   </div>
 </template>
 
@@ -41,30 +38,18 @@ export default {
 h1 {
   font-family: monospace;
 }
-.mainDiv {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  padding: 40px;
-}
+
 .welcomeDiv {
   padding: 45px;
+
   border-radius: 20px;
-  display: flex;
-  flex-direction: column;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: white;
+  margin: auto;
+  background-color: rgb(2, 25, 73);
   width: 350px;
   height: 350px;
 }
 h1 {
-  display: block;
-  position: flex;
-  color: rgb(20, 121, 60);
-  /* margin:auto; */
+  color: rgb(255, 255, 255);
   text-align: center;
   font-size: 50px;
 }

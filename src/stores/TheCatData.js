@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const catStore = defineStore("catStore", {
   state: () => {
-    let imagesUrl = "https://api.thecatapi.com/v1/images/search?limit=10";
+    let imagesUrl = "https://api.thecatapi.com/v1/images/search?limit=8";
     let catImage = null;
     return {
       imagesUrl,
@@ -13,13 +13,14 @@ export const catStore = defineStore("catStore", {
   },
 
   actions: {
-    fetchNewCat() {
+    
+    async fetchNewCat() {
       axios
         .get(this.imagesUrl)
         .then((response) => {
           console.log("Search complete!");
         //   const urls = [];
-          for (let i in response.data) {
+          for (let i of response.data) {
             const url = i.url;
             this.urls.push(url);
           }
@@ -33,6 +34,7 @@ export const catStore = defineStore("catStore", {
         });
     },
   },
+  getters: {
 
-  getters: {},
+  },
 });
