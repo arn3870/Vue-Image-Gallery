@@ -9,11 +9,9 @@
 
 <script>
 import { computed, ref } from "vue";
-import TheWelcome from "./TheWelcome.vue";
 import HelloWorld from "./HelloWorld.vue";
 export default {
   components: {
-    TheWelcome,
     HelloWorld,
   },
   setup() {
@@ -41,12 +39,15 @@ h1 {
 
 .welcomeDiv {
   padding: 45px;
-
   border-radius: 20px;
   margin: auto;
-  background-color: rgb(2, 25, 73);
   width: 350px;
-  height: 350px;
+  /* height: 350px; */
+  background-image: url('https://images.unsplash.com/photo-1553095066-5014bc7b7f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bGlnaHRpbmd8ZW58MHx8MHx8&w=1000&q=80');
+  background-attachment: fixed;
+  background-position: center;  
+}
+.mainDiv{
 }
 h1 {
   color: rgb(255, 255, 255);
