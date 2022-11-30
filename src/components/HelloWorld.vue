@@ -2,7 +2,9 @@
   <div>
   <h1>Image gallery</h1>
   <button @click="catImagesData.fetchNewCat">click here to get cat images</button>
-  <img :src="catImagesData.catImage" alt="image not found"/>
+  <span v-for="i in catImagesData.urls" :key="i">
+  <img :src="i" alt="image not found"/>
+</span>
 </div>
 </template>
 
