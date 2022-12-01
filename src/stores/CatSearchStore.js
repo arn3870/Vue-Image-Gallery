@@ -4,12 +4,17 @@ import axios from "axios";
 export const searchForCatBreed = defineStore("searchForCatBreed", {
   state: () => {
     const arrCatTypeNames = [];
+    const catDescription = [];
+    const catTemprament = [];
+    const catImageForBreed = [];
     let searchUrl = "https://api.thecatapi.com/v1/breeds";
 
     return {
       arrCatTypeNames,
       searchUrl,
-      breeds: []
+      catDescription,
+      catTemprament,
+      catImageForBreed,
     };
   },
 
@@ -21,12 +26,14 @@ export const searchForCatBreed = defineStore("searchForCatBreed", {
           console.log("Search complete!");
           for (let i of response.data) {
             const catTypeNames = i.name;
+            // this.catDescription.push(i.weight.description);
+            // this.catTemprament.push(i.weight.temperament);
+            // this.catImageForBreed.push(i.weight.image.url)
             this.arrCatTypeNames.push(catTypeNames);
           }
+          console.log(this.catImageForBreed);
           console.log(response);
           //   this.catImage = urls;
-          this.breeds = response.data;
-          console.log((this.breeds.length) + "Breeds from TheCatAPI.com")
           console.log(this.arrCatTypeNames);
         })
         .catch((err) => {

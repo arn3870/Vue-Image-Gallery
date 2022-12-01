@@ -4,8 +4,8 @@
       <h1>The Cat Gallery</h1>
     </div>
     <div>
-    <image-gallery v-if="!loading"></image-gallery>
-  </div>
+      <image-gallery v-if="!loading"></image-gallery>
+    </div>
   </div>
 </template>
 
@@ -16,7 +16,7 @@ import SearchByBreed from "./SearchByBreed.vue";
 export default {
   components: {
     ImageGallery,
-    SearchByBreed
+    SearchByBreed,
   },
   setup() {
     let loading = ref(true);
@@ -47,11 +47,11 @@ h1 {
   margin: auto;
   width: 350px;
   /* height: 350px; */
-  background-image: url('https://images.unsplash.com/photo-1553095066-5014bc7b7f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bGlnaHRpbmd8ZW58MHx8MHx8&w=1000&q=80');
+  background-image: url("https://images.unsplash.com/photo-1553095066-5014bc7b7f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bGlnaHRpbmd8ZW58MHx8MHx8&w=1000&q=80");
   background-attachment: fixed;
-  background-position: center;  
+  background-position: center;
 }
-.mainDiv{
+.mainDiv {
 }
 h1 {
   color: rgb(255, 255, 255);
