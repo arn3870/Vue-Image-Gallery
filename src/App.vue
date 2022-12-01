@@ -15,8 +15,8 @@ export default {
   <div class="mainAppDiv">
     <router-link to="/" >Home</router-link>
     <router-link to="/search">Search</router-link>
-    <the-welcome-page></the-welcome-page>
-    <router-view></router-view>
+    <!-- <the-welcome-page/> -->
+    <router-view/>
   </div>
 </template>
 
