@@ -8,12 +8,10 @@
           <img :src="i" alt="image not found" />
         </div>
       </div>
-      <router-link to="/home" tag="button">Home</router-link>
-      <router-link to="/search" tag="button">Search</router-link>
       <button @click="getImages">click to get 10 cat images</button>
     </div>
   </div>
-  <router-view></router-view>
+  <!-- <router-view></router-view> -->
 </template>
 
 <script>
@@ -57,10 +55,10 @@ h3 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-image: url("https://images.unsplash.com/photo-1553095066-5014bc7b7f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bGlnaHRpbmd8ZW58MHx8MHx8&w=1000&q=80");
+  /* background-image: url("https://images.unsplash.com/photo-1553095066-5014bc7b7f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bGlnaHRpbmd8ZW58MHx8MHx8&w=1000&q=80");
   background-attachment: fixed;
   background-position: center;
-  margin: -8px -8px -8px -8px;
+  margin: -8px -8px -8px -8px; */
 }
 
 .imagesDiv {

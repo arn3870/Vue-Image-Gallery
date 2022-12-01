@@ -9,6 +9,7 @@ export const searchForCatBreed = defineStore("searchForCatBreed", {
     return {
       arrCatTypeNames,
       searchUrl,
+      breeds: []
     };
   },
 
@@ -24,6 +25,8 @@ export const searchForCatBreed = defineStore("searchForCatBreed", {
           }
           console.log(response);
           //   this.catImage = urls;
+          this.breeds = response.data;
+          console.log((this.breeds.length) + "Breeds from TheCatAPI.com")
           console.log(this.arrCatTypeNames);
         })
         .catch((err) => {

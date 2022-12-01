@@ -1,10 +1,12 @@
 <script>
 import TheWelcomePage from '../components/TheWelcomePage.vue';
-import searchByBreed from '../components/SearchByBreed.vue'
+// import searchByBreed from '../components/SearchByBreed.vue'
+// import ImageGallery from '../components/ImageGallery.vue';
 export default{
     components:{
-        TheWelcomePage,
-        searchByBreed
+
+        // ImageGallery
+        TheWelcomePage
     },
     setup(){
 
@@ -15,6 +17,5 @@ export default{
 <template>
     <div>
     <the-welcome-page></the-welcome-page>
-    <search-by-breed></search-by-breed>
     </div>
 </template>

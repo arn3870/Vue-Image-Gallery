@@ -4,19 +4,18 @@
       <h1>The Cat Gallery</h1>
     </div>
     <div>
-    <hello-world ></hello-world>
-    <search-by-breed style="margin: auto;"></search-by-breed>
+    <image-gallery v-if="!loading"></image-gallery>
   </div>
   </div>
 </template>
 
 <script>
 import { computed, ref } from "vue";
-import HelloWorld from "./HelloWorld.vue";
+import ImageGallery from "./ImageGallery.vue";
 import SearchByBreed from "./SearchByBreed.vue";
 export default {
   components: {
-    HelloWorld,
+    ImageGallery,
     SearchByBreed
   },
   setup() {

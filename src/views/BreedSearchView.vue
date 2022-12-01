@@ -1,6 +1,5 @@
 <template>
     <search-by-breed>
-        
     </search-by-breed>
 
 </template>

@@ -1,9 +1,11 @@
 <template>
   <div>
-    <select v-for="i in arrCatTypeNames" :key="i" >
-        <option :value="i"> {{ i }}</option>
+    <section >
+    <select>
+        <option v-for="i in arrCatTypeNames" :key="i" :value="i"> {{ i }} </option>
     </select>
-    <button @click="searchCats">Search</button>
+  </section>
+  <button @click="searchCats">Search</button>
   </div>
 </template>
 
@@ -15,7 +17,7 @@ export default {
     let catSearchData = searchForCatBreed();
     const { searchByBreed } = catSearchData;
     const { arrCatTypeNames } = storeToRefs(catSearchData);
-    const searchCats = () => {
+       const searchCats = () => {
     searchByBreed();
     };
     return {
