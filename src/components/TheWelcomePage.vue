@@ -3,16 +3,20 @@
     <div v-if="loading" class="welcomeDiv">
       <h1>The Cat Gallery</h1>
     </div>
-    <hello-world v-if="!loading"></hello-world>
+    <div>
+    <image-gallery v-if="!loading"></image-gallery>
+  </div>
   </div>
 </template>
 
 <script>
 import { computed, ref } from "vue";
-import HelloWorld from "./HelloWorld.vue";
+import ImageGallery from "./ImageGallery.vue";
+import SearchByBreed from "./SearchByBreed.vue";
 export default {
   components: {
-    HelloWorld,
+    ImageGallery,
+    SearchByBreed
   },
   setup() {
     let loading = ref(true);

@@ -4,28 +4,25 @@ import axios from "axios";
 export const catStore = defineStore("catStore", {
   state: () => {
     let imagesUrl = "https://api.thecatapi.com/v1/images/search?limit=8";
-    let catImage = null;
     return {
       imagesUrl,
-      catImage,
-      urls: []
+      urls: [],
     };
   },
 
   actions: {
-    
     async fetchNewCat() {
       axios
         .get(this.imagesUrl)
         .then((response) => {
           console.log("Search complete!");
-        //   const urls = [];
+          //   const urls = [];
           for (let i of response.data) {
             const url = i.url;
             this.urls.push(url);
           }
           console.log(response);
-        //   this.catImage = urls;
+          //   this.catImage = urls;
           console.log(this.urls);
         })
         .catch((err) => {
@@ -34,7 +31,5 @@ export const catStore = defineStore("catStore", {
         });
     },
   },
-  getters: {
-
-  },
+  getters: {},
 });
