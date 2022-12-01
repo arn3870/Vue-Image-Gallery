@@ -1,29 +1,30 @@
 import { defineStore } from "pinia";
 import axios from "axios";
 
-export const catStore = defineStore("catStore", {
+export const searchForCatBreed = defineStore("searchForCatBreed", {
   state: () => {
-    let imagesUrl = "https://api.thecatapi.com/v1/images/search?limit=8";
+    const arrCatTypeNames = [];
+    let searchUrl = "https://api.thecatapi.com/v1/breeds";
+
     return {
-      imagesUrl,
-      urls: [],
+      arrCatTypeNames,
+      searchUrl,
     };
   },
 
   actions: {
-    async fetchNewCat() {
+    async searchByBreed() {
       axios
-        .get(this.imagesUrl)
+        .get(this.searchUrl)
         .then((response) => {
           console.log("Search complete!");
-          //   const urls = [];
           for (let i of response.data) {
-            const url = i.url;
-            this.urls.push(url);
+            const catTypeNames = i.name;
+            this.arrCatTypeNames.push(catTypeNames);
           }
           console.log(response);
           //   this.catImage = urls;
-          console.log(this.urls);
+          console.log(this.arrCatTypeNames);
         })
         .catch((err) => {
           console.log("Search failed!");

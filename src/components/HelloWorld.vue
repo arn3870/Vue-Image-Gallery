@@ -1,14 +1,16 @@
 <template>
-  <div >
+  <div>
     <div class="mainLibrary">
       <h1>Image gallery</h1>
-      <hr style="width: 250px; margin-bottom: 30px;">
+      <hr style="width: 250px; margin-bottom: 30px" />
       <div class="imagesDiv">
         <div v-for="i in urls" class="imgSize" :key="i">
           <img :src="i" alt="image not found" />
         </div>
       </div>
-      <router-link to="/home" tag="button" @click="getImages">click to get 10 cat images</router-link>
+      <router-link to="/home" tag="button">Home</router-link>
+      <router-link to="/search" tag="button">Search</router-link>
+      <button @click="getImages">click to get 10 cat images</button>
     </div>
   </div>
   <router-view></router-view>
@@ -26,10 +28,11 @@ export default {
     const getImages = () => {
       fetchNewCat();
     };
+
     return {
       getImages,
       urls,
-    };
+    }
   },
 };
 </script>
@@ -43,7 +46,6 @@ h1 {
   font-size: 2.6rem;
   top: -10px;
   color: white;
-
 }
 
 h3 {
@@ -55,9 +57,9 @@ h3 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-image: url('https://images.unsplash.com/photo-1553095066-5014bc7b7f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bGlnaHRpbmd8ZW58MHx8MHx8&w=1000&q=80');
+  background-image: url("https://images.unsplash.com/photo-1553095066-5014bc7b7f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bGlnaHRpbmd8ZW58MHx8MHx8&w=1000&q=80");
   background-attachment: fixed;
-  background-position: center;  
+  background-position: center;
   margin: -8px -8px -8px -8px;
 }
 
@@ -75,5 +77,4 @@ img {
   height: 300px;
   width: 300px;
 }
-
 </style>

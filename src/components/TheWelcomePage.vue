@@ -3,16 +3,21 @@
     <div v-if="loading" class="welcomeDiv">
       <h1>The Cat Gallery</h1>
     </div>
-    <hello-world v-if="!loading"></hello-world>
+    <div>
+    <hello-world ></hello-world>
+    <search-by-breed style="margin: auto;"></search-by-breed>
+  </div>
   </div>
 </template>
 
 <script>
 import { computed, ref } from "vue";
 import HelloWorld from "./HelloWorld.vue";
+import SearchByBreed from "./SearchByBreed.vue";
 export default {
   components: {
     HelloWorld,
+    SearchByBreed
   },
   setup() {
     let loading = ref(true);

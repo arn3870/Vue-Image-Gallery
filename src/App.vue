@@ -14,6 +14,7 @@ setup(){
 
 <template>
 <the-welcome-page></the-welcome-page>
+
 </template>
 
 <style scoped>
