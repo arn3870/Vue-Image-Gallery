@@ -6,12 +6,12 @@
       </select>
       </div>
     <div class="detailsScetion">
+      <h2>Cat image</h2>
+      <img :src="catImageForBreed[catForDetails]"/>
     <h2> Cat Temprament: </h2>
       <h4>{{ catTemprament[catForDetails] }} </h4>
     <h2> Cat Description: </h2>
       <p> {{ catDescription[catForDetails] }}</p>
-    <h2>Cat image</h2>
-    <img :src="catImageForBreed[catForDetails]"/>
   </div>
   </div>
 </template>
@@ -54,10 +54,12 @@ export default {
   align-items: center;
   flex-direction: column;
   margin: 20px;
+  padding-right: 300px;
+  padding-left: 300px;
 }
 img{
-  width: 700px;
-  height: 500px;
+  width: 500px;
+  height: 300px;
 }
 h2{
   color:rgb(115, 115, 255)
