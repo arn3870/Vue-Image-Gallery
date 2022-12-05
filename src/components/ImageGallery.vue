@@ -11,7 +11,6 @@
       <button @click="getImages">click to get 10 cat images</button>
     </div>
   </div>
-  <!-- <router-view></router-view> -->
 </template>
 
 <script>

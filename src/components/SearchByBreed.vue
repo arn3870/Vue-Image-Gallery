@@ -1,8 +1,8 @@
 <template>
   <div>
     <section class="breedDropDown">
-      <select>
-        <option v-for="i in arrCatTypeNames" :key="i">{{ i }}</option>
+      <select onchange=selectedBreed>
+        <option v-for="i in arrCatTypeNames" :key="i" v-bind="selectedBreed">{{ i }}</option>
       </select>
     </section>
     <!-- <button @click="searchCats">Search</button> -->
@@ -18,11 +18,15 @@ export default {
     let catSearchData = searchForCatBreed();
     const { searchByBreed } = catSearchData;
     const { arrCatTypeNames } = storeToRefs(catSearchData);
+    let selectedBreed = {}
+    console.log(window.navigator.userAgent)
+    console.log(window.navigator)
     onMounted(() => {
       searchByBreed();
     });
     return {
       arrCatTypeNames,
+      selectedBreed
     };
   },
 };
