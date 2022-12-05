@@ -53,6 +53,7 @@ export default {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin: 20px;
 }
 img{
   width: 700px;
