@@ -32,7 +32,6 @@ export const searchForCatBreed = defineStore("searchForCatBreed", {
             this.arrCatTypeNames.push(i.name);
             this.catDescription.push(i.description);
             this.catTemprament.push(i.temperament);
-            // i.image.url = null
           }
         })
         .catch((err) => {
