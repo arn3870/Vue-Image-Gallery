@@ -8,7 +8,7 @@
           <img :src="i" alt="image not found" />
         </div>
       </div>
-      <button @click="getImages">click to get 10 cats images</button>
+      <button @click="getImages">click to get 10 cat images</button>
     </div>
   </div>
 </template>
